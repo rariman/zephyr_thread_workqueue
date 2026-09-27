@@ -1,0 +1,15 @@
+menu "Thread Workqueue"
+    config STACK_SIZE
+        int "Thread Workqueue Stack Size"
+        default 512
+        help
+          Set the stack size for the thread workqueue. This value is in bytes.
+    
+    config PRIORITY
+        int "Thread Workqueue Priority"
+        default 5
+        help
+          Set the priority for the thread workqueue. This value is an integer where a lower number indicates a higher priority.
+endmenu
+
+source "Kconfig.zephyr"
